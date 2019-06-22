@@ -1,0 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container {
+    background: lightcoral;
+    width: 100%;
+    height: 100vh;
+}

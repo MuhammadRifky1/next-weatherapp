@@ -1,12 +1,13 @@
 import fetch from 'isomorphic-unfetch'
+import css from './style/index.css'
 //import Form from './components/Forms'
 //import Weather from './components/Weather'
 
 const API_KEY = 'a3536c23419eaaa0556cecaae8ae73bb';
 
 function Home({ weather }) {
-  console.table({weather})
-  return <div>{weather.sys.country}</div>
+  console.log({weather})
+  return <div className={css.container}>{weather.name}</div>
 }
 
 Home.getInitialProps = async ({ req }) => {
