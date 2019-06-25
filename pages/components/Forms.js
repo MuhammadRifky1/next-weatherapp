@@ -7,21 +7,27 @@ class Forms extends Component {
     handleFilled = e => {
         const value = e.target.value
         if(value){
-            console.log(e.target.value)
             this.setState({ isFilled: true})
         }else {
             this.setState({ isFilled: false})
         }
     }
+    
     render(){
         return (
             <div>
-                <form>
-                    <input type="text" name="city" className={this.state.isFilled ? 'filled' : ''} onBlur={this.handleFilled} /><br/>
-                    <input type="text" name="country" /><br/><br/>
+                <form onSubmit={this.props.getWeather}>
+                    <input type="text" name="city" className={this.state.isFilled ? 'filled' : ''} onBlur={this.handleFilled} required /><br/>
+                    <p className="text_muted">*) Example: Bogor</p>
+                    <input type="text" name="country" className={this.state.isFilled ? 'filled' : ''} onBlur={this.handleFilled} required /><br/>
+                    <p className="text_muted">*) Example: ID,UK,US etc</p><br/>
                     <button type="submit" className="btn">Check Weather</button>
                 </form>
                 <style jsx>{`
+                    .text_muted {
+                        font-size: 12px;
+                        color: #ddd;
+                    }
                     input {
                         background: none;
                         border: none;
