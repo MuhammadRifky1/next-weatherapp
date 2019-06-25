@@ -17,9 +17,9 @@ class Forms extends Component {
         return (
             <div>
                 <form onSubmit={this.props.getWeather}>
-                    <input type="text" name="city" className={this.state.isFilled ? 'filled' : ''} onBlur={this.handleFilled} required /><br/>
+                    <input type="text" id="city" name="city" className={this.state.isFilled ? 'filled' : ''} onBlur={this.handleFilled} required autoFocus /><br/>
                     <p className="text_muted">*) Example: Bogor</p>
-                    <input type="text" name="country" className={this.state.isFilled ? 'filled' : ''} onBlur={this.handleFilled} required /><br/>
+                    <input type="text" id="country" name="country" className={this.state.isFilled ? 'filled' : ''} onBlur={this.handleFilled} required /><br/>
                     <p className="text_muted">*) Example: ID,UK,US etc</p><br/>
                     <button type="submit" className="btn">Check Weather</button>
                 </form>
