@@ -60,3 +60,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.list_wrapper {
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.list_item {
+    display: inline-block;
+}
+.list_item a {
+    margin: 10px;
+    font-size: 16px;
+}
+
+button {
+    min-width: 50px;
+    min-height: 25px;
+}
